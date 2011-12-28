@@ -1,88 +1,281 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
-
-  <title>Akihabara/extra-halloffame @ GitHub</title>
-
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #649c3b;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #9b63c4; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #9b63c4; }
-    h3 { text-align: center; color: #9b63c4; }
-    a { color: #9b63c4; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
+	<script type="text/javascript" src="akihabara/gbox.js"></script>
+	<script type="text/javascript" src="akihabara/iphopad.js"></script>
+	<script type="text/javascript" src="akihabara/trigo.js"></script>
+	<script type="text/javascript" src="akihabara/toys.js"></script>
+	<script type="text/javascript" src="akihabara/help.js"></script>
+	<script type="text/javascript" src="akihabara/tool.js"></script>
+	<script type="text/javascript" src="akihabara/gamecycle.js"></script>
+	<style>BODY { -webkit-user-select:none; margin:0px}</style>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 </head>
-
 <body>
-  <a href="https://github.com/Akihabara/extra-halloffame"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
-
-  <div id="container">
-
-    <div class="download">
-      <a href="https://github.com/Akihabara/extra-halloffame/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/Akihabara/extra-halloffame/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="https://github.com/Akihabara/extra-halloffame">extra-halloffame</a>
-      <span class="small">by <a href="https://github.com/Akihabara">Akihabara</a></span></h1>
-
-    <div class="description">
-      Akihabara Hall of Fame!
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-      <h2>Authors</h2>
-      <p>PotHix (pothix@pothix.com)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>Akihabara (akihabara.project@gmail.com)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/Akihabara/extra-halloffame/zipball/master">zip</a> or
-      <a href="https://github.com/Akihabara/extra-halloffame/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/Akihabara/extra-halloffame</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/Akihabara/extra-halloffame">Akihabara/extra-halloffame</a>
-    </div>
-
-  </div>
-
 </body>
+<script>
+// ---
+// Copyright (c) 2010 Francesco Cottone, http://www.kesiev.com/
+// ---
+
+	// This is just a simple animation. I'm feeling the need to thank all the people that
+	// helped and are heling me and the project. A little hall of fame for contributors,
+	// friends and any kind of helpers. Thank you too, if you're interested on sources! :)
+
+	// If you've contributed to the Akihabara project, please create your avatar copying
+	// the "kesiev.png" and adding your face. Name your image with your nickname, using only
+	// a-z 0-9 letters without spaces to the "people" list. You'll appear with the rest of the cast.
+	// Avoid nickname clash!
+
+	var people=[
+		{who:"kesiev"}
+	];
+
+	var thankslist;
+
+	function go() {
+
+		thankslist={
+			font:"small",
+			scenes:[
+				{
+					speed:2,
+					spacing:2,
+					push:gbox.getScreenHH(),
+					scroller:[
+						"","","","","","","","","","","",
+						"THE HALL OF FAME",
+						"A WAY TO SAY THANK YOU",
+						"BY KESIEV",
+						"","","",
+						"MUSIC",
+						"",
+						"PIXEL HEART",
+						"BY CATHODERAYS (c)2009",
+						"WWW.CATHODERAYSMUSIC.COM",
+						"","","",
+
+						"CREATED USING","THE AKIHABARA ENGINE",
+						"BY KESIEV (c)2010",
+						"WWW.KESIEV.COM",
+						"","","",
+						"AKIHABARA IS STILL A KID",
+						"BUT IS SLOWLY GROWING.",
+						"WILL IT DIE YOUNG?",
+						"WILL IT BECOME ADULT?",
+						"WILL HAVE CHILDREN?",
+						"DON'T KNOW. BUT SOMEONE",
+						"IS HELPING. AND I HAVE TO",
+						"SAY 'THANK YOU' TO THEM.",
+						"IN RANDOM ORDER.",
+						"","","","","","","","","","","",
+
+						"BIANCA BRENNA",
+						"",
+						"FOR HELPING ME BEING MYSELF.",
+						"","","-","","",
+
+						"VALERIO BARRILA'",
+						"GIUSEPPE VALENTI",
+						"FABIO MAFFIOLETTI",
+						"FLAVIO RICCI",
+						"","FOR HELP AND FRIENDSHIP.",
+						"","","-","","",
+
+						"DION ALMAER",
+						"","FOR STARTING THE","BALL ROLLING :)",
+						"","","-","","",
+
+						"ADRIAN DUYZER",
+						"","FOR GIVING THE FIRST HUG","TO AHIHABARA AND NOTICING","THAT MY GIRLFRIEND WAS","REALLY A SAINT.",
+						"","","-","","",
+
+						"LIM CHEE AUN",
+						"JORDI POLO",
+						"","FOR SUGGESTING THE","GITHUB ADVENTURE TO ME.",
+						"","","-","","",
+
+						"JOE LE BRECH",
+						"PIOTR PETRUS",
+						"PAULLLLIRISH",
+						"","FOR SUGGESTING ME THAT","THE PROJECT COULD","BE INTERESTING	FOR SOMEONE","THAT WASN'T ME.",
+						"","","-","","",
+
+						"HOANG 'PETITPRINCE' PHAM",
+						"","SHHH! DON'T SAY ANYONE","THE LITTLE SECRET ABOUT","T-SPIN!",
+						"","","-","","",
+
+						"PREDRAG STOJADINOVIC",
+						"CASIMIR DECAS",
+						"IAN STOKES",
+						"ANDY GRAULUND",
+						"","FOR FUNNY CHITCHAT!",
+						"","","-","","",
+
+						"EMILY DANIELS",
+						"AND THE BOSTON INDIES",
+						"","FOR HELPING SO MUCH AND","BEING SOME SORT OF PIONEERS!",
+						"","","-","","",
+
+						"OWEN RUBEL",
+						"ALRIK11ES",
+						"FOOYEE",
+						"","FOR BEING THE FIRST GETTING","THE HANDS DIRTY WITH","AKIHABARA.",
+						"","","-","","",
+
+						"NIELS 'T HOFFT",
+						"REMI SHARP",
+						"SIMONE CICERO",
+						"","FOR THE 'PRESS'!",
+						"","","-","","",
+
+						"ALEX CONGLETON (GREENLEO)",
+						"ANDYEXPANDY",
+						"ANDY GRAULUND",
+						"","FOR MAKING AKIHABARA","SAY 'MAMA'. OR 'PAPA'.",
+						"","","-","","",
+
+
+						"JACOB STEPHENS",
+						"","FOR HAVING NOTICED THE","FINE ART OF ASCII ART","WITHIN THE CAPMAN DEMO.",
+						"","","-","","",
+
+						"DARIUS KAZEMI",
+						"DARREN TORPEY",
+						"","FOR THE MOST WELL-DONE","TUTORIAL EVAAH!","(SUBJECTIVE...)",
+						"","","-","","",
+
+						"AJAXIAN.COM",
+						"CANVASDEMOS.COM",
+						"","FOR BEING GREAT SITES FOR","LEARNING STUFF.",
+						"","","-","","",
+
+						"ALL THE",
+						"THANK YOU FOR HAVING MADE",
+						"AKIHABARA OPENSOURCE!",
+						"","FOR THEIR WORDS.",
+						"","","-","","",
+
+
+						"ALL THE",
+						"PLEASE, NOT OPENSOURCE!",
+						"I CANNOT USE THIS!",
+						"","FOR THEIR WORDS.",
+						"","","-","","",
+
+
+						"ALL THE",
+						"PLEASE ADD MUSIC",
+						"REQUESTERS",
+						"","BECAUSE AKIHABARA WOULD HAVE","BEEN MUTE WITHOUT","THEM.",
+						"","","-","","",
+
+
+						"ALL THE",
+						"I'VE PRESSED THE A KEY BUT",
+						"NOTHING HAPPENS",
+						"AND ALL THE",
+						"DVORAK/AZERTY KEYBOARD",
+						"USERS",
+						"","FOR THEIR PATIENCE.",
+						"","","-","","",
+
+						"ALL THE",
+						"FLASH IS DEAD! TAKE THIS!",
+						"THESE GAMES ARE PURE TRASH!",
+						"FLASH RULES!",
+						"OMFGWTF! LOOK AT THESE GAMES!",
+						"THE GRAPHICS ARE UGLY!",
+						"IT'S MUTE IT'S MUTE! WHHYY!",
+						"","TWITTERS/BLOGGERS",
+						"","FOR MAKING MY DAYS PURE FUN!",
+						"","","-","","",
+
+						"THE 16TH SLIDE OF",
+						"THE DESIGNING WEBSITE FOR",
+						"MOBILE SAFARI (OSDC 2010)",
+						"IN TAIWAN",
+						"","FOR REMEMBER ME THAT","THE WORLD IS SMALL WITH","INTERNET.",
+						"","","-","","",
+
+						"JAY AND",
+						"THE 'FRUITY JUNGLE TRIP' TEAM",
+						"","FOR GIVING ME A TICKET","FOR A GREAT ADVENTURE!",
+						"","","-","","",
+
+
+						"AND","","YOU!!"				,
+						"","","","","","","","","","","",
+
+						"THANKS FOR WATCHING!",
+						"LOVE WHO HELPS YOU",
+						"ON GROWING.",
+						"",
+						"IN ANY WAY.",
+						"",
+						"THE... BEGINNING?"
+					]
+				}
+			]
+		};
+
+		gbox.setGroups(["halloffame"]);
+		gbox.setAudioChannels({bgmusic:{volume:1}});
+
+		gbox.addObject({
+			group:"halloffame",
+			counter:0,
+			kesframes:{ speed:5, frames:[0,1,2,1] },
+			alpha:1,
+			initialize:function() {
+				toys.resetToy(this,"thanks-scroller");
+				toys.resetToy(this,"rising");
+				gbox.hitAudio("song");
+				this.peopleperrow=Math.floor((gbox.getScreenW()-10)/gbox.getTiles(people[0].who).tilew);
+				var row;
+				for (var i=0;i<people.length;i++) {
+					row=Math.floor(i/this.peopleperrow);
+					people[i].place={x:(row%2==0?gbox.getScreenW()-10-gbox.getTiles(people[i].who).tilew:10)+(((i%this.peopleperrow)*gbox.getTiles(people[i].who).tilew)*(row%2==0?-1:1)),y:gbox.getScreenH()-10-(row*(gbox.getTiles(people[i].who).tileh/2.5))-gbox.getTiles(people[i].who).tileh};
+				}
+
+		  	},
+			blit:function() {
+				this.counter=(this.counter+1)%40;
+				gbox.blitFade(gbox.getBufferContext(),{alpha:1,color:"rgb(100,100,100)"});
+				if (toys.logos.linear(this,"rising",{image:"logo",x:gbox.getScreenHW()-gbox.getImage("logo").hwidth,y:gbox.getScreenHH()-gbox.getImage("logo").hheight,sx:gbox.getScreenHW()-gbox.getImage("logo").hwidth,sy:gbox.getScreenH(),speed:1,every:1,alpha:this.alpha}))
+					if (this.alpha>0.2) this.alpha-=0.01;
+				for (var i=people.length-1;i>=0;i--)
+					gbox.blitTile(gbox.getBufferContext(),{tileset:people[i].who,tile:help.decideFrame(this.counter,this.kesframes),dx:people[i].place.x,dy:people[i].place.y});
+				toys.dialogue.render(this,"thanks-scroller",thankslist);
+			}
+		});
+
+		gbox.go();
+
+	};
+
+	// BOOTSTRAP
+	gbox.onLoad(function () {
+
+		// Put additional licenses here!
+		help.akihabaraInit({title:"The Hall Of Fame",portrait:true,padmode:"none",splash:{footnotes:["Music: Pixel Heart by Cathode Rays","(c)2009 - Permitted by its owner."]}}); // you can define also height:xx, width:xx and fps:xxx and the pad mode now! Happy?
+
+		gbox.addImage("logo","resources/logo.png");
+		gbox.addImage("font","resources/font.png");
+		for (var i=0;i<people.length;i++)
+			gbox.addImage(people[i].who,"resources/"+people[i].who+".png");
+
+		var audioserver="resources/audio/"
+
+		gbox.addAudio("song",[audioserver+"theme.mp3",audioserver+"theme.ogg"],{channel:"bgmusic",loop:true});
+
+		gbox.addFont({id:"small",image:"font",firstletter:" ",tileh:8,tilew:8,tilerow:255,gapx:0,gapy:48});
+
+		for (var i=0;i<people.length;i++)
+			gbox.addTiles({id:people[i].who,image:people[i].who,tileh:76,tilew:48,tilerow:3,gapx:0,gapy:0});
+
+		gbox.loadAll(go);
+
+	}, false);
+
+	</script>
 </html>
